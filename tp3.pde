@@ -111,7 +111,7 @@ void draw() {
     dinero= dinero+1;
     personajePosY = height - tam/2;
   }
-  //Condicion si junta diamante
+  //Condicion si junta pez
   if (dist(PresaPosW, PresaPosH, personajePosX, personajePosY)<=tam-5) {
     dinero = dinero + 2; 
     PresaPosW = round(random(0, width));
@@ -127,13 +127,13 @@ void draw() {
   text("Tiempo:" + round((tiempo)), width-350, height-30);
   text("Peces:" + (dinero), width-150, height-30);
 
-  //Si cruza el oceano suma un punto
+  //Si cruza el oceano suma un pez
   if (personajePosY < 0) {
     dinero = dinero + 1;
     personajePosY = height - tam/2;
   }
 
-  //Victoria si llega a 10 monedas
+  //Victoria si llega a 10 peces
   if (dinero >= 10) {
     ganaJuego(width, height);
   }
@@ -168,9 +168,12 @@ void keyPressed() {
 /*-----V.M.CLICKED (INICIO)-----*/
 //Para regresar a su estado inicial
 void mouseClicked() {  
+  if((dinero >= 10)||(tiempo <= 0 && dinero < 10)){
   personajePosY = height - tam/2;
   dinero = 0;
   tiempo = 60;
+  
+  }
 }
 /*-----V.M.CLICKED (FINAL)-----*/
 
