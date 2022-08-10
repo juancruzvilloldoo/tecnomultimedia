@@ -21,7 +21,7 @@ int cantH = 10, tam, cantW = 10, personajePosY, personajePosX, dinero = 0, Presa
 int [] posX = new int [cantH]; 
 int [] dirX = new int [cantH]; 
 
-float tiempo = 3;
+float tiempo = 60;
 
 PFont fuente;
 PImage [] imagenes = new PImage [6];
