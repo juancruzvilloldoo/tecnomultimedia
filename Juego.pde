@@ -29,6 +29,9 @@ class Juego {
       componentes.contador();
       componentes.moneda();
       componentes.obstaculo();
+      if (keyCode == 82){
+        estado=0;
+      }
     }
 
     if (estado==0) { //Primer Pantalla
